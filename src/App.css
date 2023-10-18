@@ -1,0 +1,126 @@
+/* Common Styles */
+
+button {
+  padding: 10px 15px;
+  margin: 10px;
+  border: none;
+  background-color: #7d7f81;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #bdd4ec;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid;
+  padding: 10px 15px;
+  margin: 10px !important;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  background-color: lightslategrey;
+}
+
+.user-card:hover {
+  background-color: #778899d9;
+}
+
+.user-profile .user-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid;
+  padding: 15px;
+  border-radius: 5px;
+}
+.user-profile {
+  border: 1px solid;
+  padding: 5px;
+}
+
+.user-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 5px;
+}
+.grid > div {
+  font-size: 30px;
+  padding: 0.5em;
+  color: #ffffff;
+  background: #1c87c9;
+  text-align: center;
+}
+.profileText{
+  width: 75%;
+  text-align: center;
+}
+
+.post {
+  border: 1px solid #eee;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(12, 10, 2, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.post:hover {
+  transform: scale(0.25);
+}
+
+.post-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 767px) {
+  .user-profile .user-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-posts {
+    justify-content: center;
+  }
+  .user-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .post {
+    width: calc(100% - 10px);
+  }
+}
